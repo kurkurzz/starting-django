@@ -17,8 +17,13 @@ def author(request):
     return Response(author)
 
 @api_view(['GET'])
-def get_news(request):
+def get_news_list(request):
     news = News.objects.all()
-    print(news)
     serializer = NewsSerializer(news,many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def get_news(request, pk):
+    news = News.objects.get(id=pk)
+    serializer = NewsSerializer(news,many=False)
     return Response(serializer.data)
