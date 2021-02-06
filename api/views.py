@@ -11,11 +11,18 @@ from .models import News
 # Create your views here.
 @api_view(['GET'])
 def author(request):
-    author = {
-        'name' : 'Muhammad Nurhafiz',
-        'github link' : 'https://github.com/kurkurzz'
+    main = {
+        'author':
+            {
+            'name' : 'Muhammad Nurhafiz',
+            'github link' : 'https://github.com/kurkurzz'
+            },
+        'content' : {
+            '/api/news' : '''['GET','POST']''',
+            '/api/news/{id}' : '''['GET','PUT','DELETE']'''
+        }
     }
-    return Response(author)
+    return Response(main)
 
 @api_view(['GET','POST'])
 def news(request):
