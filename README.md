@@ -12,8 +12,6 @@ This repo is created for my personal reference to create a restful api project u
     django-admin startproject {project-name}
     ```
 3. In `settings.py`, add
-<br/>
-
     ```python
     INSTALLED_APPS = [
     ...
