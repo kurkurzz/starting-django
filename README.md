@@ -26,7 +26,6 @@ This repo is created for my personal reference to create a restful api project u
     python manage.py startapp {app-name}
     ```
 2. In `settings.py` in the main app folder, add 
-<br/>
     ```python
     INSTALLED_APPS = [
     ...
